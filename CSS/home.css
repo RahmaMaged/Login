@@ -1,0 +1,24 @@
+body {
+  background-color: #24353f;
+}
+
+.box {
+  box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}
+
+.navbar {
+  background-color: #24353f;
+  box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}
+
+.nav-item {
+  border: 1px solid #ffc107;
+}
+
+.nav-item:hover {
+  background-color: #ffc107;
+}
+
+h1 {
+  color: #179fb5;
+}

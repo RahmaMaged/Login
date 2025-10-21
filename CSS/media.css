@@ -1,0 +1,25 @@
+/*   Breakpoints    */
+
+/* XS -> ex : smart watches*/
+@media all and (width < 576px) {
+}
+
+/* S -> ex : smart phones*/
+@media all and (width >= 576px) {
+}
+
+/* MD -> ex : ipad , mac 13 inch*/
+@media all and (width >= 768px) {
+}
+
+/* LG -> ex : laptop*/
+@media all and (width >= 992px) {
+}
+
+/* XL -> */
+@media all and (width >= 1200px) {
+}
+
+/* XXL -> ex : smart tv*/
+@media all and (width >= 1400px) {
+}

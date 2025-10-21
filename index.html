@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <!--Bootstrap style-->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <!--Main Style-->
+    <link rel="stylesheet" href="./CSS/index.css" />
+    <!--Media-->
+    <link rel="stylesheet" href="./CSS/media.css" />
+  </head>
+  <body>
+    <div class="container p-5">
+      <div class="box text-center p-5 w-75 d-flex flex-column m-auto">
+        <h1>Smart Login System</h1>
+        <input
+          type="text"
+          placeholder="Enter your name"
+          id="userName"
+          name="userName"
+          class="form-control my-3 p-2 d-none"
+        />
+        <input
+          type="text"
+          placeholder="Enter your email"
+          id="userEmail"
+          name="userEmail"
+          class="form-control my-3 p-2"
+        />
+        <input
+          type="password"
+          placeholder="Enter your password"
+          id="userPassword"
+          name="userPassword"
+          class="form-control my-3 p-2"
+        />
+        <p id="validationText" class="d-none"></p>
+        <button id="logInBtn" onclick="login()" class="rounded-1 p-2 my-3">
+          Login
+        </button>
+        <button
+          id="signUpBtn"
+          class="rounded-1 p-2 my-3 d-none"
+          onclick="addUser()"
+        >
+          Sign Up
+        </button>
+        <p id="formText">
+          Don’t have an account?
+          <a
+            class="text-decoration-none text-white"
+            onclick="updateFormToSignUp(event)"
+            href=""
+            >Sign Up</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./JS/index.js"></script>
+  </body>
+</html>
