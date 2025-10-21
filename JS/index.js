@@ -19,6 +19,7 @@ var signUpMode = false;
 function updateFormToSignUp(event) {
   if (event) event.preventDefault();
   signUpMode = true;
+  clearInputs();
   validationText.classList.add("d-none");
   userName.classList.remove("d-none");
   signUpButton.classList.remove("d-none");
@@ -148,6 +149,7 @@ function clearInputs() {
 
 function updateFormToLogIn() {
   signUpMode = false;
+  clearInputs();
   validationText.classList.add("d-none");
   userEmail.classList.remove("is-valid", "is-invalid");
   userPassword.classList.remove("is-valid", "is-invalid");
@@ -171,6 +173,13 @@ function login() {
     return;
   }
 
+  if (users.length == 0) {
+    validationText.innerHTML = "Incorrect email and password";
+    validationText.classList.add("text-danger");
+    validationText.classList.remove("d-none");
+    return;
+  }
+
   for (var i = 0; i < users.length; i++) {
     if (
       userEmail.value == users[i].user_Email &&
@@ -184,10 +193,12 @@ function login() {
       validationText.innerHTML = "incorrect email";
       validationText.classList.add("text-danger");
       validationText.classList.remove("d-none");
+      return;
     } else if (userPassword.value != users[i].user_Password) {
       validationText.innerHTML = "incorrect password";
       validationText.classList.add("text-danger");
       validationText.classList.remove("d-none");
+      return;
     }
   }
 }
